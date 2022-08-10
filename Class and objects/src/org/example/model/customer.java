@@ -3,13 +3,15 @@ package org.example.model;
 public class customer {
 	private int customerId;
 	private String customerName;
+	
+
 	public customer(){
 		
 	}
 
 	public customer(int customerId , String customerName) {
 		this.customerId=customerId;
-		this.customerName=customerName;
+		this.customerName=customerName;   //constructor with parameter
 		
 	
 		
