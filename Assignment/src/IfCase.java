@@ -1,5 +1,5 @@
 
-public class SwitchCase {
+public class IfCase {
 	
 	void start() {
 		System.out.println("Start method called");
@@ -11,15 +11,15 @@ public class SwitchCase {
 		System.out.println("exit method called");
 	}
 	public static void main(String[] args) {
-		SwitchCase SwiObj=new SwitchCase();
+		IfCase ifObj=new IfCase();
 		int menuInput=3;
 		if(menuInput==1) {
-			SwiObj.start();
+			ifObj.start();
 		}else if(menuInput==2) {
-			SwiObj.displayIncrement();
+			ifObj.displayIncrement();
 		}
 		else if(menuInput==3) {
-			SwiObj.exit();
+			ifObj.exit();
 		}
 		else {
 			System.out.println("Your input value is wrong");

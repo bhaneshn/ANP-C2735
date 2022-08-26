@@ -12,7 +12,7 @@ public class EmployeeView {
 		Employee Employee1= new Employee (2,'B',20000);
 		EmployeeService Employee=new EmployeeService(); // object
 		System.out.println("Old salary:"+Employee1.getEmployeeSalary());
-		Employee updateSal=Employee.calculateSalaryIncrement(Employee1,25);
+		Employee updateSal=Employee.calculateSalaryIncrement(Employee1);//here we passes objecr employee and increment value
 		System.out.println("Employee Id is : "+updateSal.getEmployeeId());
 		System.out.println("Employee Initial : "+ updateSal.getEmployeeInitial());
 		System.out.println("Employee Salary : "+ updateSal.getEmployeeSalary());

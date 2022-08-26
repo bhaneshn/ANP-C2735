@@ -1,11 +1,11 @@
 package Org.Anudip.smp.model;
 
-public class student {
-	int studentId;
-	char studentName;  // Attributes -> In attributes we set the which data types we want with variables name
-	int age;
+public class student {  //this is the student class
+	int studentId;   // which we have abject inside of of class like instance of class
+	char studentName;  // Attributes -> In attributes we set the  data types which 
+	int age;           //we want with variables name
 
-	public student() {  // --> constructor and the set values for accessing
+	public student() {  // --> empty constructor and the set values for accessing
 		studentId = 1;
 		studentName = 'R';
 		age = 23;

@@ -1,8 +1,11 @@
 package org.example.view;
 
 public class Product {
+	
+	
 		private int productPrice;
 		private String productName;
+		
 		public Product(){
 			
 		}

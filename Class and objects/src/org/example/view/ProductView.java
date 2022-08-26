@@ -9,7 +9,7 @@ public class ProductView {
 	}
 	int doublePrice(int price) {
 		
-		return 2*price;  
+		return price;  
 	}
 	
 	public static void main(String[] args) {
@@ -21,8 +21,9 @@ public class ProductView {
 		
 		Product prodPrice1=new Product(50,"Bhanesh");
 		ProductView prod2=new ProductView();
+		
 		int price=prodPrice1.getProductPrice();
-		int price2=prod2.doublePrice(price);
+		int price2=prod2.doublePrice(2*price);
 		System.out.println("the price original is : "+ price);
 		System.out.println("the price after double is : "+ price2);
 	}

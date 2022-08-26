@@ -6,7 +6,7 @@ public class NestedForLoop {
 	
 			for(int j=0;j<i;j++) {
 				
-				System.out.print(j*i+" ");
+				System.out.print(i*j+" ");
 			}
 			System.out.println();
 		}

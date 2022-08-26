@@ -3,15 +3,15 @@ import org.example.model.customer;
 
 public class MainView {
 	
-	int getcustomerIdfromcustomer(customer custObj) {
+	int getcustomerIdfromcustomer(customer custObj) {  //here accept customer obj/ and make a method
 		int custId=custObj.getCustomerId();  // calling method
 		return custId;
 	
 	
 	}
-	String getcustomerNameCromCustId(int custId) {
-		String name="Bhanesh";
-		return name;
+	String getcustomerNameFromCustName(String Obj) { // here accept customer Id
+		 return Obj; //print customer name inside the method function
+		
 	}
 
 	
@@ -19,12 +19,12 @@ public class MainView {
 		customer customer1=new customer(1,"Bhanesh");
 		MainView mainViewObj=new MainView();
 		
-		int custId=mainViewObj.getcustomerIdfromcustomer(customer1);
-		System.out.println("The customerId is : "+ custId);
+		int custId1=mainViewObj.getcustomerIdfromcustomer(customer1); //this customer1 from customer custObj
+		System.out.println("The customerId is : "+ custId1);
 		
 		
 		MainView customerName=new MainView();
-		String custName=customerName.getcustomerNameCromCustId(custId);
+		String custName=customerName.getcustomerNameFromCustName("Bhanesh");
 		System.out.println("Customer Name is : "+custName);
 	
 	}
