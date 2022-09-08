@@ -2,7 +2,7 @@ package question3;
 
 public class Degree {
 
-	public void getDegree( ) {
+	public void getDegree( String name) {
 	}
 	
 }

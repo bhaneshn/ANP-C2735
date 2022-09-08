@@ -2,28 +2,15 @@ package question2;
 
 public class SBI extends RBI {
 
-	int minInterestRate;
-	int minBalance;
-	int maxWithdrwalLimit;
+	public void setInterestRate(double interestRate) {
+		this.interestRate=interestRate;
+	}
 	
-
-	public int getMinInterestRate() {
-		return minInterestRate;
+	public void getInterestRate() {
+		
 	}
-	public void setMinInterestRate(int minInterestRate) {
-		this.minInterestRate = minInterestRate;
-	}
-	public int getMinBalance() {
-		return minBalance;
-	}
-	public void setMinBalance(int minBalance) {
-		this.minBalance = minBalance;
-	}
-	public int getMaxWithdrwalLimit() {
-		return maxWithdrwalLimit;
-	}
-	public void setMaxWithdrwalLimit(int maxWithdrwalLimit) {
-		this.maxWithdrwalLimit = maxWithdrwalLimit;
+	public void getWithdwralLimit() {
+		
 	}
 
 }

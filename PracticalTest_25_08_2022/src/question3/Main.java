@@ -19,7 +19,7 @@ public class Main {
 		}
 		System.out.println("The Number of UG object : "+ugcount);
 		System.out.println("The Number of PG object : "+pgcount);
-		System.out.println("The Number of Degree object : "+dcount);
+		System.out.println("The Number of Degree object : "+dcount);//here we are calling the count of objects
 		}
 		
 	public static void main(String[] args) {
@@ -29,7 +29,9 @@ public class Main {
 		Degree deg1=new Degree();
 		UnderGraduate ug1=new UnderGraduate();
 		PostGraduate pg1=new PostGraduate();
-		countObject(deg,ug,pg,deg1,ug1,pg1);
+		Degree degree=new Degree();
+		
+		countObject(deg,ug,pg,deg1,ug1,pg1,degree);// here we are invoking the count of objects
 		
 		
 		
