@@ -27,8 +27,8 @@ public class Main {
 		System.out.println("8 : Display Passenger Details ");
 		System.out.println("9: Exit");
 		System.out.println("Enter your Choice");
-		int subMenuChoice=scanner.nextInt();
 		
+		int subMenuChoice=scanner.nextInt();
 		scanner.nextLine();
 		switch(subMenuChoice) {
 		case 1:
