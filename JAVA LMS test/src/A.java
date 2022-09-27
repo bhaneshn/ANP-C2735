@@ -4,7 +4,7 @@ public class A {
 
 	
 
-	public void sendstring(String s1, StringBuffer s2) {
+	public void sendsString(String s1, StringBuffer s2) {
 
 		s1 = s1+s2.toString();
 
@@ -22,7 +22,10 @@ public class A {
 
 		StringBuffer sbr = new StringBuffer("BBB");
 
-		new A().sendstring(str, sbr);
+		new A().sendsString(str, sbr);// Anyonomous object
+		
+//		A a=new A();
+//		a.sendsString(str, sbr);
 
 		System.out.print("str=" + str + " ");
 
