@@ -1,16 +1,15 @@
 
+public class P14 {
 
-public class A {
-	public Integer val;  //Member Variable
+	public Integer val;
 
 	public void fun1() {
 
 	Integer grade1 = new Integer(25);
 
-//	val = grade1;
+	val = grade1;
 
 	fun2(grade1);
-	val = grade1;
 
 	}
 
@@ -24,28 +23,19 @@ public class A {
 
 	}
 
-	else {
+//	Else {  here { (else) is (Else) } always check line by line code before executing
 
 	System.out.println("not equal");
 
 	}
 
-	}
+	
 
 	public static void main(String ar[]) {
 
-	A c=new A();
+	P14 c=new P14();
 
 	c.fun1();
 
 	}
-
 }
-
-
-
-
-
-
-
-
