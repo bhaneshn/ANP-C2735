@@ -13,6 +13,9 @@ public class Main {
 	static BookDAO bookDAO = new BookDAO ();
 	
 	public static void main(String[] args) {
+		int input=0;
+		do {
+
 		Scanner scanner=new Scanner(System.in);
 		while (true) {
 		System.out.println("1 Enter Book Records");
@@ -27,18 +30,21 @@ public class Main {
 			bookView.acceptBookDetails();
 			break;
 		case 2:
-			bookDAO.searchByTitle();
+			bookDAO.searchByTitle(null);
 			break;
 		case 3:
-			bookDAO.searchByAuthor();
+			bookDAO.searchByAuthor(null);
 			break;
 		case 4:
 			System.exit(0);
 			break;
 		default:
 			System.out.println("Inavild Input");
+			input=scanner.nextInt();
 		}
 	}
+		
+		}while(input==1);
 	}
 
 }

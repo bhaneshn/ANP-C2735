@@ -15,16 +15,11 @@ public class BookView {
 	public void acceptBookDetails() {
 		
 		System.out.print("Enter book Id : ");
-		String bookId = sc.next();
-		try {
-			bookid(bookId);
-		}
-		catch(Exception e) {
-			System.out.println(e);
-		}
+		String bookId =sc.nextLine();
+		
 		
 		System.out.print("Enter book title : ");
-		String title = sc.next();
+		String title = sc.nextLine();
 		
 		System.out.print("Enter book's author name : ");
 		String author = sc.next();
@@ -81,15 +76,16 @@ public class BookView {
 			else {
 				throw new InvalidBookidException(bookId);
 			}
-			 
-		}
+		
+	
+	
+}
 		public static List<Book> dispalyAllBooks() {
-			
 			return bookService.displayAllBooks();
 		
 		}
 
-		
+	
 
 		
 	
