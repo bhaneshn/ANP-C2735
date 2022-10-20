@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import org.practicaltest.question1.model.Employee;
 
-public class Main {
+public class EmployeeView {
 
 	public static void displayEmployeeInformation(Employee[] employee) {
 //		Scanner scanner=new Scanner(System.in);

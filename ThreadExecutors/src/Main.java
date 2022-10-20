@@ -6,13 +6,13 @@ import java.util.concurrent.Future;
 
 public class Main {
 public static void main(String[] args) {
-//	Executor executor=Executors.newSingleThreadExecutor();
+//	Executor executor=Executors.newSingleThreadExecutor(); //this will work with Runnable task
 //	Executor executor=Executors.newFixedThreadPool(2);
 //	Executor executor=Executors.newCachedThreadPool();
 	Executor executor=Executors.newScheduledThreadPool(2);
 	executor.execute(new CopyTask());
 	executor.execute(new SpellCheck());
-	ExecutorService es=Executors.newCachedThreadPool();
+	ExecutorService es=Executors.newCachedThreadPool();//this will work with callable task
 	Future<String> fObj=es.submit(new DisplayTask());
 	try {
 		System.out.println(fObj.get());
