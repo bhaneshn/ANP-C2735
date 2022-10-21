@@ -43,7 +43,7 @@ public class EmployeeView {
 			String date=scanner.nextLine();
 			LocalDate date1=LocalDate.parse(date);
 			System.out.println(date1);
-			emp[i]=new Employee(id,name,date1);
+			emp[i]=new Employee(id,name,date1);//bind the object
 		}
 			
 		

@@ -20,6 +20,9 @@ public class LoginUserView {
 		user.setPassword(scanner.nextLine());
 		
 		try {
+			if(user.getPassword().length()<6) {
+				throw new PasswordFormatException("Length of password is less than 6");
+			}
 			System.out.println(LoginUserService.setUserDetails(user));
 		}catch(PasswordFormatException e) {
 			System.out.println("Incorrect: "+e.getMessage());

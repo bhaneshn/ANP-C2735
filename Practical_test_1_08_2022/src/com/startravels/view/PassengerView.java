@@ -29,6 +29,7 @@ Scanner sc = new Scanner(System.in);
 		System.out.println("Gender : ");
 		passenger.setGender(sc.nextLine());
 	
+		
 		passengerService.addPassengerDetails(passenger);
 	}
 

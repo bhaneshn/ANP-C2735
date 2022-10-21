@@ -1,11 +1,13 @@
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
+import java.util.Scanner;
 
 public class RandomAccessFileDemo {
 public static void main(String[] args) {
 	RandomAccessFile raf;
 	try { 
+	
 		 raf=new RandomAccessFile("demo.txt","rw");
 		raf.writeChars("Bhanesh ");
 		raf.writeBytes("Nawale");
