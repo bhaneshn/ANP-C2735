@@ -1,44 +1,81 @@
 
 
 public class A {
-	public Integer val;  //Member Variable
+	public static void main(String args[]) {
 
-	public void fun1() {
+		Car c1 = new Car("Red", "Maruti", 200);
 
-	Integer grade1 = new Integer(25);
+		Car c2 = new Car("Red", "Maruti", 200);
 
-//	val = grade1;
+		if (c1.equals(c2)) {
 
-	fun2(grade1);
-	val = grade1;
+		System.out.println("The two objects are equal");
 
-	}
+		}
 
-	private void fun2(Integer grade2) {
+		}
 
-	grade2 = grade2 .intValue();
+		}
 
-	if(grade2==val) {
+		class Car {
 
-	System.out.println("equal");
+		String color;
 
-	}
+		String brandName;
 
-	else {
+		int speed;
 
-	System.out.println("not equal");
+		public Car(String color, String brandName, int speed) {
 
-	}
+		this.color = color;
 
-	}
+		this.brandName = brandName;
 
-	public static void main(String ar[]) {
+		this.speed = speed;
 
-	A c=new A();
+		}
 
-	c.fun1();
+		String getBrandName() {
 
-	}
+		return brandName;
+
+		}
+
+		int getSpeed() {
+
+		return speed;
+
+		}
+
+		String getColor() {
+
+		return color;
+
+		}
+
+		public boolean equals(Object obj) {
+
+		if(this == obj) {
+
+		return true;
+
+		}
+
+		if (!(obj instanceof Car)) {
+
+		return false;
+
+		}
+
+		Car Car = (Car)obj;
+
+		return speed == Car.getSpeed() && brandName.equals
+
+		(Car.getBrandName())
+
+		&& color.equals(Car.getColor());
+
+		}
 
 }
 
