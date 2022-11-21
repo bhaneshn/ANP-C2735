@@ -1,44 +1,37 @@
 package org.practice;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NavigableMap;
+import java.util.NavigableSet;
+import java.util.PriorityQueue;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
 public class A {
 	
-	public static void main(String s[]) {
+	public static void main(String[] args)
 
-		A ref1 = new A(10);
+	{
 
-		A ref2;
+	List list1 = new ArrayList ( );
 
-		ref2 = ref1.inc();
+	List <Object> list2 = list1;
 
-		System.out.println(ref1.a);
+	list1.add(10);
 
-		System.out.println(ref2.a);
+	list1.add(11);
 
-		ref2 = ref1.inc();
+	list1.add("mona") ;
 
-		System.out.println(ref2.a);
+	list1.add(true);
+
+	System.out.println(list1);
+
+	System.out.println(list2);
+
+	}
 
 		}
-	int a;
-
-	A(int i) {
-
-	a = i;
-
-	}
-
-	A inc( ) {
-
-	A temp = new A(a+10);
-
-	return temp;
-
-	}
-
-	}
-
-	class TestQuestion {
-
-	
-
-}
