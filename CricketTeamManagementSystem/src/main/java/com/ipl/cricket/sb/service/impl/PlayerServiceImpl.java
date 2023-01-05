@@ -2,13 +2,18 @@ package com.ipl.cricket.sb.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.ipl.cricket.sb.entity.Player;
 import com.ipl.cricket.sb.exception.PlayerNotFoundException;
 import com.ipl.cricket.sb.repository.PlayerRepository;
 import com.ipl.cricket.sb.service.PlayerService;
 
+@Service
 public class PlayerServiceImpl implements PlayerService{
 
+	@Autowired
 	PlayerRepository playerRepo;
 	
 	@Override
@@ -46,6 +51,19 @@ public class PlayerServiceImpl implements PlayerService{
 		
 	playerRepo.findById(pid).orElseThrow(()->new PlayerNotFoundException("Entered player id does not found"));
 		playerRepo.deleteById(pid);
+	}
+
+	@Override
+	public List<Player> getPlayerByName(String pFirstname) {
+		// TODO Auto-generated method stub
+		return playerRepo.getPlayerByName(pFirstname);
+	}
+
+	@Override
+	public Player getPlayerByRank(long pRank) {
+		// TODO Auto-generated method stub
+		return playerRepo.getPlayerByRank(pRank);
+		
 	}
 
 }

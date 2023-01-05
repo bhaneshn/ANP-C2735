@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,9 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ipl.cricket.sb.entity.Player;
 import com.ipl.cricket.sb.service.PlayerService;
 
+
+//rest controller to handle all incoming request using rest API
 @RestController
 public class PlayerController {
 
+	@Autowired
 	private PlayerService pSer;
 	
 	//save passenger details using post mapping
@@ -53,5 +57,19 @@ public class PlayerController {
 	@GetMapping("/gett")
 	public List<Player> getAllPlayer(){
 		return pSer.getAllPlayer();
+	}
+	
+	
+	//fetching player detail by First name using get mapping
+	@GetMapping("/getpByName/{pFirstname}")
+	public List<Player> getpByName(@PathVariable("pFirstname") String pFirstname){
+		return pSer.getPlayerByName(pFirstname);
+	}
+	
+	
+	//fetching player detail by rank using get mapping
+	@GetMapping("/getpByRank/{pRank}")
+	public ResponseEntity<Player> getpByRank(@PathVariable("pRank") long pRank){
+		return new ResponseEntity<Player>(pSer.getPlayerByRank(pRank),HttpStatus.OK);
 	}
 }

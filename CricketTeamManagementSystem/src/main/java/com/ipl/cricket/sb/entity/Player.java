@@ -1,13 +1,21 @@
 package com.ipl.cricket.sb.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -40,9 +48,14 @@ public class Player {
 	private String pType;
 	
 	@Column(length=50,nullable=false)
-	@NotBlank(message="Enter Your Rank")
+	@NotNull(message="Enter Your Rank")
 	private long pRank;
 
+
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "player", cascade = CascadeType.ALL)
+	@JsonManagedReference
+	private List<Match> matchList;
+	
 	public Player() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -61,6 +74,8 @@ public class Player {
 		this.pType = pType;
 		this.pRank = pRank;
 	}
+	
+	
 
 	public long getId() {
 		return id;
